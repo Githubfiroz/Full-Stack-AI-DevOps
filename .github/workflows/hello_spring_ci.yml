@@ -56,7 +56,7 @@ jobs:
             with:
                 context: docker/app1-hello/springboot/hello-spring
                 push: true
-                tags: 
+                tags: |
                     ${{ secrets.DOCKER_USERNAME }}/hello-spring:latest
                     ${{ secrets.DOCKER_USERNAME }}/hello-spring:${{ github.sha }}
                     ${{ secrets.DOCKER_USERNAME }}/hello-spring:${{ github.ref_name }}
