@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+### Ignore all private key and certificate files
+**/*.pem
+**/*.csv
+.env

@@ -1,0 +1,36 @@
+services:
+  hello-python:
+    build: ./python
+    image: firozf2003/hello-python:1.0
+    #container_name: app1-hello
+    ports:
+      - "3000:3000"
+    environment:
+      ENV_VALUE: ${ENV_VALUE_PY}
+    #networks:
+      #- app-network 
+  
+
+  hello-node:
+    build: ./node
+    image: firozf2003/hello-node:1.0
+    #container_name: app1-hello
+    ports:
+      - "3001:3000"
+    environment:
+      ENV_VALUE: ${ENV_VALUE_NODE}
+    #networks:
+      #- app-network 
+
+
+  
+  hello-spring:
+    build: ./springboot/hello-spring
+    image: firozf2003/hello-spring:1.0
+    #container_name: app1-hello
+    ports:
+      - "8080:8080"
+    environment:
+      ENV_VALUE: ${ENV_VALUE_SPRINGBOOT}
+    #networks:
+      #- app-network 
